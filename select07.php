@@ -21,8 +21,8 @@ if($status==false){
 }else{
 //  selectデータの数だけ自動でループしてくれる
   while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-  $view .= '<p>';
-  $view .= $result["name"]."　".$result["url"]."　".$result["coment"];
+  $view .= '<p><a href="'.$result["url"].'" target="_blank">'.$result["name"].'</a>';
+  $view .= ' '.$result["coment"];
   $view .= '</p>';
   }
 }
